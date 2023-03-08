@@ -1,0 +1,16 @@
+### Run Phred
+phred -id ./all_plate_ab1  -sa all_out.fasta -qa all_out.q
+
+### Open juypter notebook
+jupyter notebook --notebook-dir=Y:/
+
+### Run Python Script to convert Phred Scores to Real Q score
+phred_fix_fasta.ipynb
+
+### Activate Conda Env with fastp installed
+conda activate sanger_basecalling
+
+## Run Fastp to trim out poor quality sequences
+fastp -Q -L -5 -3 --max_len1 800 --cut_front_mean_quality 25 --cut_tail_mean_quality 25 -i All_16s_fix_2.fastq -o All_16s_fix_2_trim_25.fastq
+
+## Run RDP
