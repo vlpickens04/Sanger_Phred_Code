@@ -37,3 +37,31 @@ Not a great data base & classifier
 
 6. Export taxonomy as TSV
 	qiime tools export --input-path All_16s_fix_classification.qza --output-path All_16s_qiime2_itgdb_90.tsv
+
+
+## Turning off confidence
+
+5. Assign Taxonomy
+	qiime feature-classifier classify-sklearn --i-classifier taxa_itgdb_q2_2022_11_clf.qza --i-reads All_16s_fix_2_trim_25.qza --o-classification All_16s_fix_classification_d.qza --p-n-jobs 10 --p-confidence disable
+
+6. Export taxonomy as TSV
+	qiime tools export --input-path All_16s_fix_classification_d.qza --output-path All_16s_qiime2_itgdb_d.tsv
+
+
+## Trying at 70%
+
+5. Assign Taxonomy
+	qiime feature-classifier classify-sklearn --i-classifier taxa_itgdb_q2_2022_11_clf.qza --i-reads All_16s_fix_2_trim_25.qza --o-classification All_16s_fix_classification_7.qza --p-n-jobs 10 --p-confidence .7
+
+6. Export taxonomy as TSV
+	qiime tools export --input-path All_16s_fix_classification_7.qza --output-path All_16s_qiime2_itgdb_7.tsv
+
+
+
+## Trying at 80%
+
+5. Assign Taxonomy
+	qiime feature-classifier classify-sklearn --i-classifier taxa_itgdb_q2_2022_11_clf.qza --i-reads All_16s_fix_2_trim_25.qza --o-classification All_16s_fix_classification_8.qza --p-n-jobs 10 --p-confidence .8
+
+6. Export taxonomy as TSV
+	qiime tools export --input-path All_16s_fix_classification_8.qza --output-path All_16s_qiime2_itgdb_8.tsv
