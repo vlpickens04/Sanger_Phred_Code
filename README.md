@@ -14,7 +14,7 @@ Sanger sequencing raw absrobance data can be found in "./all_plat_abs".
 
 ## 1. Running Phred:
 ```sh
-phred -id abs/ -sa All_16s.fasta -qa All_16s.qual
+phred -id ./all_plat_abs -sa All_16s.fasta -qa All_16s.qual
 ```
 
 ## 2. Combine Sequences, and quality scores + Transform to Phred64 to Phred33
