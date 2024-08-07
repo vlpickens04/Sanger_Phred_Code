@@ -10,12 +10,10 @@
 
 ## 0. Input Data:
 
-Sanger sequencing raw absrobance data can be found in "./all_plat_abs".
+Sanger sequencing raw absrobance data can be found in "./all_plate_ab1".
 
-## 1. Running Phred:
-```sh
-phred -id ./all_plat_abs -sa All_16s.fasta -qa All_16s.qual
-```
+## 1. Running Phred (CodonCode Aligner):
+Obtain CodonCode Aligner (https://www.codoncode.com/aligner/) and basecall ab1 files from ./all_plate_ab1 with phred-phrap using scrip found at ./CodonCode_Aligner_Scripts/Basecall_Phred.alscpt. Move results to all_phred_out.
 
 ## 2. Combine Sequences, and quality scores + Transform to Phred64 to Phred33
 Follow through notebook phred_fix_fastq.ipynb
