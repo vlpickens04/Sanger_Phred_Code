@@ -36,7 +36,11 @@ Classifier: RDP Naive Bayesian rRNA Classifier Version 2.11 <br>
 Taxonomical Hierarchy: RDP 16S rRNA training setNo 18 07/2020 <br>
 Confidence threshold (for classification to Root ONLY): 80% <br>
 
+
 ### Results can be found in "RDP_Output"
 
 ## 6. (Optional) Get sequence length statistics
 Follow through notebook "fasta_length_table_gen.ipynb". Sequence length statistics can be found in "trimmed16s_seq_length.csv".
+
+## 7. License
+Distributed for the [USDA ARS](https://www.ars.usda.gov/) under the Public Domain. See `LICENSE` for more information.
